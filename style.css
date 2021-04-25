@@ -29,6 +29,12 @@ p {
 .quick-links-section button {
     margin: 8px;
     padding: 8px 24px;
+    white-space: nowrap;
+}
+
+#btn-area {
+    min-width: 64%;
+    min-width: 64vw;
 }
 
 .bookmarks-section {
