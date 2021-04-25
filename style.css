@@ -1,0 +1,68 @@
+body {
+    font-family: "Open Sans", sans-serif;
+}
+
+.smooth-transition {
+    transition: 0.3s;
+}
+
+.center-all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-section {
+    min-height: 20%;
+    min-height: 20vh; 
+}
+
+#search-bar {
+    min-width: 40%;
+    min-width: 40vw; 
+}
+
+p {
+    margin-bottom: 2em;
+}
+
+.quick-links-section button {
+    margin: 8px;
+    padding: 8px 24px;
+}
+
+.bookmarks-section {
+    margin: 0;
+    padding: 16px 8px;
+}
+
+.bookmark-category {
+    margin-bottom: 32px;
+}
+
+.bookmark-category h3 {
+    font-size: 1.2em;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 8px;
+}
+
+.bookmark-category ul {
+    margin: 0;
+    padding: 0;
+}
+
+.bookmark-category li {
+    margin: 0;
+    padding: 4px 8px;
+    list-style: none;
+}
+
+.bookmark-category li:nth-child(even) {
+    background-color: lightgray;
+}
+
+.bookmark-category li:nth-child(odd) {
+    background-color: whitesmoke;
+}  
