@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- Copyright (c) 2021 Jared Daniel Carbonell Recomendable. All rights reserved. -->
+<!-- Copyright (c) 2021 Jared Daniel Carbonell Recomendable. -->
 
 <html>
 
@@ -35,6 +35,7 @@
                     <form>
                         <div class="form-group">
                             <input id="search-bar" class="form-control form-control-lg" type="text" placeholder="Search">
+                            <!-- https://duckduckgo.com/?q=KEYWORDS%20HERE -->
                         </div>
                     </form>
                 </div>
@@ -51,27 +52,27 @@
                 <div id="btn-area" class="container">
                     <div class="row">
                         <div class="col-md-3">
-                            <button type="button" class="btn btn-block btn-danger">UoA Canvas</button>
+                            <button type="button" onclick="window.location.href='https://canvas.auckland.ac.nz';" class="btn btn-block btn-danger">UoA Canvas</button>
                         </div>
                         <div class="col-md-3">
-                            <button type="button" class="btn btn-block btn-secondary">SOFTENG 281</button>
+                            <button type="button" onclick="window.location.href='https://web-lecture-material.github.io/softeng-281-website/';" class="btn btn-block btn-secondary">SOFTENG 281</button>
                         </div>
                         <div class="col-md-3">
-                            <button type="button" class="btn btn-block btn-dark">GitHub</button>
+                            <button type="button" onclick="window.location.href='https://github.com/login';" class="btn btn-block btn-dark">GitHub</button>
                         </div>
                         <div class="col-md-3">
-                            <button type="button" class="btn btn-block btn-info">LinkedIn</button>
+                            <button type="button" onclick="window.location.href='https://www.linkedin.com/login';" class="btn btn-block btn-info">LinkedIn</button>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-4">
-                            <button type="button" class="btn btn-block btn-warning">UoA Mail</button>
+                            <button type="button" onclick="window.location.href='http://mail.aucklanduni.ac.nz';" class="btn btn-block btn-warning">UoA Mail</button>
                         </div>
                         <div class="col-md-4">
-                            <button type="button" class="btn btn-block btn-primary">UoA SSO</button>
+                            <button type="button" onclick="window.location.href='http://www.studentservices.auckland.ac.nz';" class="btn btn-block btn-primary">UoA SSO</button>
                         </div>
                         <div class="col-md-4">
-                            <button type="button" class="btn btn-block btn-danger">Java Docs</button>
+                            <button type="button" onclick="window.location.href='https://docs.oracle.com/javase/7/docs/';" class="btn btn-block btn-danger">Java Docs</button>
                         </div>
                     </div>
                 </div>
@@ -90,27 +91,36 @@
                         <div class="bookmark-category">
                             <h3>Dev References</h3>
                             <ul>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
+                                <li><a href="https://techdevguide.withgoogle.com/">Google Tech Dev Guide</a></li>
+                                <li><a href="https://github.com/kamranahmedse/developer-roadmap">Web Dev Roadmap Advice</a></li>
+                                <li><a href="https://medium.com/tech-tajawal/modern-backend-developer-in-2018-6b3f7b5f8b9">Guide towards being a Back-End Developer</a></li>
+                                <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                                <li><a href="https://developer.mozilla.org/en-US/">Mozilla Developer Network</a></li>
+                                <li><a href="https://hackerthemes.com/bootstrap-cheatsheet/">Bootstrap 4 Cheat Sheet</a></li>
+                                <li><a href="https://www.tutorialspoint.com/cprogramming/index.htm">C Tutorial</a></li>
+                                <li><a href="https://www.gnu.org/software/libc/manual/pdf/libc.pdf">GNU C Library Reference</a></li>
+                                <li><a href="http://www.cplusplus.com/reference/">Standard C++ Library Reference</a></li>
+                                <li><a href="https://en.cppreference.com/w/">C and C++ References</a></li>
+                                <li><a href="https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/">C# Reference</a></li>
+                                <li><a href="https://docs.oracle.com/javase/7/docs/">Java SE 7 Documentation</a></li>
+                                <li><a href="https://docs.oracle.com/javase/7/docs/api/java/lang/Exception.html">Java SE 7 Exceptions</a></li>
+                                <li><a href="https://kivy.org/#support">Kivy Support</a></li>
+                                <li><a href="https://microbit-micropython.readthedocs.io/en/latest/">BBC micro:bit MicroPython Docs</a></li>
+                                <li><a href="https://code.visualstudio.com/docs/python/tutorial-flask">Python and Flask Tutorial in VS Code</a></li>
+                                <li><a href="https://docs.scrapy.org/en/latest/">Scrapy 1.5 Documentation</a></li>
                             </ul>
                         </div>
                         <div class="bookmark-category">
                             <h3>Uni References</h3>
                             <ul>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
+                                <li><a href="https://cdn.auckland.ac.nz/assets/auckland/engineering/study-with-us/docs/prospectuses-and-guides/foe-ug-handbook-2020.pdf">Engineering Undergraduate Handbook 2020</a></li>
+                                <li><a href="https://www.auckland.ac.nz/en/on-campus/life-on-campus/code-of-conduct.html">Code of Conduct</a></li>
+                                <li><a href="https://www.library.auckland.ac.nz/services/it-essentials">IT Essentials</a></li>
+                                <li><a href="https://www.auckland.ac.nz/en/study/student-support/career-development-and-employability-services.html">Career Development and Employability Services</a></li>
+                                <li><a href="https://www.library.auckland.ac.nz/">Libraries and Learning Services</a></li>
+                                <li><a href="https://www.library.auckland.ac.nz/workshops/">Libraries and Learning Services Workshops</a></li>
+                                <li><a href="https://www.library.auckland.ac.nz/services/student-learning/ele">English Language Enrichment</a></li>
+                                <li><a href="https://www.library.auckland.ac.nz/tv-radio/">TV and Radio</a></li>
                             </ul>
                         </div>
                     </div>
@@ -118,19 +128,45 @@
                         <div class="bookmark-category">
                             <h3>Developer Tools</h3>
                             <ul>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
+                                <li><a href="https://github.com/login">GitHub</a></li>
+                                <li><a href="https://gitlab.com/users/sign_in">GitLab</a></li>
+                                <li><a href="https://www.pythonanywhere.com/login/?next=/">PythonAnywhere</a></li>
+                                <li><a href="https://www.codecademy.com/login">Codecademy</a></li>
+                                <li><a href="https://www.sololearn.com/User/Login?ReturnUrl=%2FProfile">SoloLearn</a></li>
+                                <li><a href="https://edu.sphero.com/">Sphero Edu</a></li>
+                                <li><a href="http://ai2.appinventor.mit.edu/">MIT App Inventor 2</a></li>
+                                <li><a href="https://www.figma.com/">Figma</a></li>
+                                <li><a href="https://www.amazon.com/ap/signin?clientContext=134-6705470-1065969&openid.return_to=https%3A%2F%2Fdeveloper.amazon.com%2F&openid.identity=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&openid.assoc_handle=mas_dev_portal&openid.mode=checkid_setup&marketPlaceId=ATVPDKIKX0DER&openid.claimed_id=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0%2Fidentifier_select&pageId=amzn_developer_portal&openid.ns=http%3A%2F%2Fspecs.openid.net%2Fauth%2F2.0&siteState=clientContext%3D144-8241048-1736455%2CsourceUrl%3Dhttps%253A%252F%252Fdeveloper.amazon.com%252F%2Csignature%3Dnull&language=en_US">Amazon Developer Services</a></li>
+                                <li><a href="https://www.awseducate.com/signin/SiteLogin">AWS Educate</a></li>
+                                <li><a href="https://console.dialogflow.com/api-client/#/login">Dialogflow</a></li>
+                                <li><a href="https://wit.ai/">Wit.ai</a></li>
                             </ul>
                         </div>
                         <div class="bookmark-category">
                             <h3>Uni Tools</h3>
                             <ul>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
+                                <li><a href="https://www.myaucklanduni.ac.nz/">MyAucklandUni Student Portal</a></li>
+                                <li><a href="http://mail.aucklanduni.ac.nz/">Email</a></li>
+                                <li><a href="https://canvas.auckland.ac.nz/">Canvas (LMS)</a></li>
+                                <li><a href="http://www.studentservices.auckland.ac.nz/">Student Services Online (SSO)</a></li>
+                                <li><a href="https://campuscard.auckland.ac.nz/">Campus Card</a></li>
+                                <li><a href="https://homeweb.auckland.ac.nz/">UoA File Storage</a></li>
+                                <li><a href="https://afsweb.ec.auckland.ac.nz/">EC AFS</a></li>
+                                <li><a href="https://studentcdes.auckland.ac.nz/">MyCDES and Job Board</a></li>
+                                <li><a href="https://flexit.auckland.ac.nz/">FlexIT</a></li>
+                                <li><a href="https://piazza.com/">Piazza</a></li>
+                                <li><a href="https://web-lecture-material.github.io/softeng-281-website/">SOFTENG 281</a></li>
+                                <li><a href="https://acp.foe.auckland.ac.nz/ide">ACP IDE</a></li>
+                                <li><a href="https://blockly.auckland.ac.nz/">Blockly</a></li>
+                                <li><a href="https://aropa.ec.auckland.ac.nz/aropa.php?action=login&at=1">Aropa</a></li>
+                                <li><a href="https://coderunner3.auckland.ac.nz/moodle/">CodeRunner</a></li>
+                                <li><a href="https://peerwise.cs.auckland.ac.nz/at/?uoa_nz">PeerWise</a></li>
+                                <li><a href="https://flexiblelearning.auckland.ac.nz/writeatuni/">write@uni</a></li>
+                                <li><a href="https://practera.app/login">Practera</a></li>
+                                <li><a href="https://www.notion.so/HEX5-5-Discovery-Sprint-Program-896626e0e0aa4f14b40a763aad76c37e">HEX5.5 Discovery Sprint Program</a></li>
+                                <li><a href="https://app.mural.co/t/leanstudio7514/m/leanstudio7514/1617677773520/eb2e104ac8ed9afaeb73c6da6ffb5249f7fc249f">HEX Virtual Workshop - April 2021 • LeanStudio</a></li>
+                                <li><a href="https://auckland.campuslabs.com/engage/">Engage Platform</a></li>
+                                <li><a href="https://connect.auckland.ac.nz/">Alumni Connect</a></li>
                             </ul>
                         </div>
                     </div>
@@ -138,21 +174,28 @@
                         <div class="bookmark-category">
                             <h3>Home</h3>
                             <ul>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
+                                <li><a href="https://web.whatsapp.com/">WhatsApp Web</a></li>
+                                <li><a href="https://www.google.com/gmail/about/#">Gmail</a></li>
+                                <li><a href="https://remo.co/">Remo</a></li>
+                                <li><a href="https://www.mural.co/">Mural</a></li>
+                                <li><a href="https://miro.com/">Miro</a></li>
+                                <li><a href="https://drive.google.com/">Google Drive</a></li>
+                                <li><a href="https://www.canva.com/en_gb/">Canva</a></li>
+                                <li><a href="https://dunjudge.me/">mrJudge</a></li>
+                                <li><a href="https://noisg.comp.nus.edu.sg/login">NOI Login</a></li>
+                                <li><a href="https://ptable.com/">Dynamic Periodic Table</a></li>
+                                <li><a href="https://www.desmos.com/calculator">Desmos</a></li>
+                                <li><a href="https://fonts.google.com/">Google Fonts</a></li>
+                                <li><a href="https://colorhunt.co/">Color Hunt</a></li>
+                                <li><a href="https://www.iconfinder.com/free_icons">Icons</a></li>
+                                <li><a href="https://undraw.co/illustrations">unDraw Illustrations</a></li>
                             </ul>
                         </div>
                         <div class="bookmark-category">
                             <h3>Uni Social</h3>
                             <ul>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
-                                <li><a href="">Text</a></li>
+                                <li><a href="http://www.ausa.org.nz/">Auckland University Students' Association</a></li>
+                                <li><a href="https://naumainz.studyinnewzealand.govt.nz/">NauMai NZ</a></li>
                             </ul>
                         </div>
                     </div>
