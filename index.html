@@ -20,6 +20,9 @@
 
         <!-- Import Webpage Stylesheet -->
         <link rel="stylesheet" href="style.css">
+
+        <!-- Import Script -->
+        <script src="script.js"></script>
     </head>
 
     <body>
@@ -32,7 +35,7 @@
                 </div>
                 <br>
                 <div class="container">
-                    <form>
+                    <form id="form" onsubmit="return processSearch();">
                         <div class="form-group">
                             <input id="search-bar" class="form-control form-control-lg" type="text" placeholder="Search">
                             <!-- https://duckduckgo.com/?q=KEYWORDS%20HERE -->
