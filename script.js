@@ -27,9 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const macLike = isApplePlatform();
-    document.getElementById("keyboard-binding-tip").innerHTML = macLike
-        ? 'Tip: Press <kbd>⌘</kbd> + <kbd>K</kbd> to focus the search bar.'
-        : 'Tip: Press <kbd>Ctrl</kbd> + <kbd>K</kbd> to focus the search bar.';
+    document.getElementById("search-bar").setAttribute("placeholder", macLike
+        ? "⌘K to search"
+        : "Ctrl+K to search"
+    );
 
     // Redirect to DDG appropriately on submit
     document.getElementById("form").addEventListener("submit", function (event) {
