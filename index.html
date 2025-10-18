@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta name="description" content="Portfolio">
         <meta name="author" content="Jared Daniel Recomendable">
+        <meta name="color-scheme" content="light dark">
         <title>JDCR Homepage</title>
         <link rel="icon" href="jdcr.png" type="image/x-icon">
 
@@ -23,6 +24,74 @@
 
         <!-- Import Script -->
         <script src="script.js"></script>
+
+        <style>
+            /* Opt in to UA dark form controls, scrollbars, etc. */
+            :root { color-scheme: light dark; }
+
+            /* Follow the OS setting */
+            @media (prefers-color-scheme: dark) {
+                html, body {
+                    background-color: #121212;
+                    color: #e8e8e8;
+                }
+
+                /* Containers that are light in the default theme */
+                .bg-light { background-color: #121212 !important; }
+                .bg-white { background-color: #1a1a1a !important; }
+                .bg-dark { background-color: #000 !important; }
+
+                /* Text utilities */
+                .text-dark { color: #e8e8e8 !important; }
+                .text-light { color: #f1f1f1 !important; }
+
+                /* Links */
+                a { color: #8ab4f8; }
+                a:hover, a:focus { color: #a8c7fa; text-decoration: underline; }
+
+                /* Form controls */
+                .form-control {
+                    background-color: #1e1e1e;
+                    color: #e8e8e8;
+                    border-color: #3c3c3c;
+                }
+                .form-control::placeholder { color: #9aa0a6; }
+                .form-text.text-muted { color: #9aa0a6 !important; }
+
+                /* Buttons that are "light" by default */
+                .btn-light {
+                    background-color: #2a2a2a;
+                    color: #e8e8e8;
+                    border-color: #3c3c3c;
+                }
+
+                /* Optional: cards/sections you may add later */
+                .bookmark-category { border-color: #2a2a2a; }
+
+                /* Ensure links don't carry light-theme background/alt-row styling */
+                a { background-color: transparent !important; }
+
+                /* Bookmarks: remove alternating row backgrounds and unify borders */
+                .bookmark-category ul li {
+                    background: transparent !important;
+                    border-color: #2a2a2a !important;
+                }
+                .bookmark-category ul li:nth-child(odd),
+                .bookmark-category ul li:nth-child(even) {
+                    background: transparent !important;
+                }
+
+                /* Bookmarks: consistent link colors in dark mode */
+                .bookmark-category a {
+                    color: #8ab4f8 !important;
+                    background-color: transparent !important;
+                }
+                .bookmark-category a:hover,
+                .bookmark-category a:focus {
+                    color: #a8c7fa !important;
+                }
+            }
+        </style>
     </head>
 
     <body>
