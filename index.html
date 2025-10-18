@@ -58,6 +58,31 @@
                     color: #e8e8e8;
                     border-color: #3c3c3c;
                 }
+
+                /* Keep inputs dark when focused in dark mode */
+                .form-control:focus {
+                    background-color: #1e1e1e;
+                    color: #e8e8e8;
+                    border-color: #5f6368; /* a touch lighter for focus */
+                    box-shadow: 0 0 0 0.2rem rgba(138, 180, 248, 0.25); /* match link accent */
+                    caret-color: #e8e8e8;
+                }
+
+                /* Tame iOS/Chrome autofill light background in dark mode */
+                input.form-control:-webkit-autofill,
+                input.form-control:-webkit-autofill:focus,
+                textarea.form-control:-webkit-autofill,
+                textarea.form-control:-webkit-autofill:focus {
+                    -webkit-text-fill-color: #e8e8e8;
+                    -webkit-box-shadow: 0 0 0px 1000px #1e1e1e inset;
+                    box-shadow: 0 0 0px 1000px #1e1e1e inset;
+                    transition: background-color 5000s ease-in-out 0s; /* prevents flash */
+                    border-color: #5f6368;
+                }
+
+                /* Ensure placeholder remains muted on focus as well */
+                .form-control:focus::placeholder { color: #9aa0a6; }
+
                 .form-control::placeholder { color: #9aa0a6; }
                 .form-text.text-muted { color: #9aa0a6 !important; }
 
