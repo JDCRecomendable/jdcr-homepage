@@ -3,8 +3,7 @@ function constructUrl(rawQuery) {
     return "https://duckduckgo.com/?q=" + encodeURIComponent(rawQuery);
 }
 
-function processSearch() {
-    var rawQuery = document.getElementById("search-bar").value;
+function processSearch(rawQuery) {
     url = constructUrl(rawQuery);
     window.location.assign(url);
 }
@@ -36,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("form").addEventListener("submit", function (event) {
         event.preventDefault();
         console.log(event);
-        processSearch();
+        processSearch(document.getElementById("search-bar").value);
     });
 
     // Add keyboard shortcut: Cmd/Ctrl+K focuses the search bar
@@ -59,4 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("search-bar").focus();
+
+    // Redirect to DDG automatically when query params are detected
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("q");
+    if (q) processSearch(q);
 });
