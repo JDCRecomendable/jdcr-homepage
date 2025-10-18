@@ -9,6 +9,7 @@ function processSearch(rawQuery) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+    // #region search-bar
     // Detect platform using User-Agent Client Hints (modern) with UA fallback
     function isApplePlatform() {
         try {
@@ -58,6 +59,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     document.getElementById("search-bar").focus();
+
+    // #endregion search-bar
+
+    // #region display-time
+    function updateClock() {
+        const clock = document.getElementById("clock");
+        if (!clock) return;
+
+        const now = new Date();
+        const formatted = new Intl.DateTimeFormat(undefined, {
+            hour: "2-digit",
+            minute: "2-digit",
+            second: "2-digit",
+            hourCycle: "h23",
+            hour12: false
+        }).format(now);
+
+        clock.innerHTML = formatted;
+    }
+
+    function startClock() {
+        updateClock();
+        setInterval(updateClock, 1000);
+    }
+
+    startClock();
+    // #endregion display-time
 
     // Redirect to DDG automatically when query params are detected
     const params = new URLSearchParams(window.location.search);
