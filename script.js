@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const macLike = isApplePlatform();
     document.getElementById("search-bar").setAttribute("placeholder", macLike
-        ? "⌘K to search"
-        : "Ctrl+K to search"
+        ? "⌘K to search DuckDuckGo"
+        : "Ctrl+K to search DuckDuckGo"
     );
 
     // Redirect to DDG appropriately on submit
@@ -57,4 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
+
+    document.getElementById("search-bar").focus();
 });
