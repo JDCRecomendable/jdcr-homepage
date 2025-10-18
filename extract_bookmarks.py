@@ -2,7 +2,9 @@
 
 # -*- coding: utf-8 -*-
 
-# Copyright (c) 2021 Jared Daniel Carbonell Recomendable.
+# Copyright (c) 2021-2025 Jared Recomendable.
+
+import sys
 
 def extract_bookmarks(bookmark_filepath):
     '''
@@ -41,14 +43,9 @@ def format_to_html(bookmarks):
             html += '\n{}\n'.format(title)
     return html
 
-def write_to_file(string, output_filepath):
-    '''
-    Write string to file.
-    '''
-    output_file = open(output_filepath, 'w')
-    output_file.write(string)
-    output_file.close()
-
-bookmarks = extract_bookmarks('bookmarks.html')
-html = format_to_html(bookmarks)
-write_to_file(html, 'output.txt')
+if __name__ == "__main__":
+    if len(sys.argv) == 2:
+        bookmarks = extract_bookmarks(sys.argv[1])
+        print(format_to_html(bookmarks))
+    else:
+        print(f"Usage: extract_bookmarks.py <html_bookmarks_file>")
