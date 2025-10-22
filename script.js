@@ -11,26 +11,42 @@ function processSearch(rawQuery) {
 document.addEventListener("DOMContentLoaded", function () {
     // #region search-bar
     // Detect platform using User-Agent Client Hints (modern) with UA fallback
-    function isApplePlatform() {
+    function isMacPlatform() {
         try {
             if (navigator.userAgentData && navigator.userAgentData.platform) {
                 const p = navigator.userAgentData.platform.toLowerCase();
-                // Values often like "macOS", "iOS", "Windows", "Linux", "Android", "Chrome OS"
-                return p.includes("mac") || p.includes("ios");
+                return p.includes("mac");
             }
         } catch (e) { /* ignore */ }
 
-        // Fallback: parse userAgent string (works with Safari UA override)
+        // Fallback for Safari or older browsers
         const ua = navigator.userAgent || "";
-        // Covers macOS and iOS devices; iPadOS on Safari may report as "Macintosh" but is fine here
-        return /\bMacintosh\b|\biPhone\b|\biPad\b|\biPod\b/.test(ua);
+
+        // Include macOS and iPads
+        return /\bMacintosh\b/.test(ua);
     }
 
-    const macLike = isApplePlatform();
-    document.getElementById("search-bar").setAttribute("placeholder", macLike
-        ? "⌘K to search DuckDuckGo"
-        : "Ctrl+K to search DuckDuckGo"
-    );
+    function isLinuxOrWindowsPlatform() {
+        try {
+            if (navigator.userAgentData && navigator.userAgentData.platform) {
+                const p = navigator.userAgentData.platform.toLowerCase();
+                return p.includes("linux") || p.includes("chrome os") || p.includes("windows");
+            }
+        } catch (e) { /* ignore */ }
+
+        // Fallback for Gecko, WebKit, and other non-Chromium browsers
+        const ua = navigator.userAgent || "";
+
+        // Exclude Android explicitly, which include Linux in the user agent string
+        if (/\bAndroid\b/i.test(ua)) return false;
+
+        return /\bLinux\b|\bX11\b|\bWindows\b/.test(ua);
+    }
+
+    let placeholderText = "Search DuckDuckGo";
+    if (isMacPlatform()) placeholderText = "⌘K to search DuckDuckGo";
+    if (isLinuxOrWindowsPlatform()) placeholderText = "Ctrl+K to search DuckDuckGo";
+    document.getElementById("search-bar").setAttribute("placeholder", placeholderText);
 
     // Redirect to DDG appropriately on submit
     document.getElementById("form").addEventListener("submit", function (event) {
