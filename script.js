@@ -1,3 +1,8 @@
+// Redirect to DDG automatically when query params are detected
+const params = new URLSearchParams(window.location.search);
+const q = params.get("q");
+if (q) processSearch(q);
+
 function constructUrl(rawQuery) {
     // encode the query so characters/spaces don't break the URL
     return "https://duckduckgo.com/?q=" + encodeURIComponent(rawQuery);
@@ -102,9 +107,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     startClock();
     // #endregion display-time
-
-    // Redirect to DDG automatically when query params are detected
-    const params = new URLSearchParams(window.location.search);
-    const q = params.get("q");
-    if (q) processSearch(q);
 });
